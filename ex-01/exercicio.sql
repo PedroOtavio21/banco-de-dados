@@ -1,0 +1,40 @@
+CREATE DATABASE lanchonete;
+
+CREATE TABLE IF NOT EXISTS Clientes (
+	id SERIAL PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  telefone VARCHAR(20) NOT NULL,
+  endereço VARCHAR(355) NOT NULL,
+  data_de_cadastro DATE DEFAULT CURRENT_DATE
+);
+
+CREATE TABLE IF NOT EXISTS Fornecedores (
+	id SERIAL PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  telefone VARCHAR(20) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  data_de_contratacao DATE DEFAULT CURRENT_DATE,
+  observacoes VARCHAR(550) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Lanches (
+	id SERIAL PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  descricao VARCHAR(355) NOT NULL,
+  preco DECIMAL(10, 2) NOT NULL
+);
+
+-- Necessário rever datas e situações
+CREATE TABLE IF NOT EXISTS Pedidos (
+	id SERIAL PRIMARY KEY,
+  mesa INT NOT NULL,
+  data_e_hora_do_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  situacao VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS IngredientesEmEstoque (
+	id SERIAL PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  categoria VARCHAR(100) NOT NULL,
+  quantidade INT NOT NULL
+);
