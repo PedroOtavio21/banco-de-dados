@@ -33,3 +33,18 @@ Ingredientes em estoque
 - nome
 - categoria
 - quantidade
+
+## Notas
+Na resolução do exercício, alguns tipos podem ser abritários, dependendo de como a equipe ou o desenvolvedor pode definir como serão os tipos de colunas da tabela
+
+Ex.:
+```sql
+CREATE TABLE IF NOT EXISTS alimentos(
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    -- A descrição poderia ser um texto pequeno ou grande, dependendo de como o desenvolvedor achar melhor
+    -- Ou seja, poderia ser de tipo VARCHAR(255) ou TEXT
+    descricao TEXT NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL
+);
+```

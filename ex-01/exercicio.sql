@@ -3,18 +3,18 @@ CREATE DATABASE lanchonete;
 CREATE TABLE IF NOT EXISTS Clientes (
 	id SERIAL PRIMARY KEY,
   nome VARCHAR(255) NOT NULL,
-  telefone VARCHAR(20) NOT NULL,
-  endereço VARCHAR(355) NOT NULL,
-  data_de_cadastro DATE DEFAULT CURRENT_DATE
+  telefone VARCHAR(20),
+  endereço VARCHAR(255),
+  data_de_cadastro DATE NOT NULL DEFAULT CURRENT_DATE
 );
 
 CREATE TABLE IF NOT EXISTS Fornecedores (
 	id SERIAL PRIMARY KEY,
   nome VARCHAR(255) NOT NULL,
-  telefone VARCHAR(20) NOT NULL,
-  email VARCHAR(255) NOT NULL,
-  data_de_contratacao DATE DEFAULT CURRENT_DATE,
-  observacoes VARCHAR(550) NOT NULL
+  telefone VARCHAR(20),
+  email VARCHAR(255),
+  data_de_contratacao DATE NOT NULL DEFAULT CURRENT_DATE,
+  observacoes VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS Lanches (
