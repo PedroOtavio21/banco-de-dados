@@ -65,3 +65,17 @@ SELECT (id, titulo, ano, genero, temporadas, episodios, avaliacao, situacao) FRO
 
 -- Da melhor para pior avaliação, já estando finalizadas
 SELECT * FROM series WHERE situacao = 'Finalizada' ORDER BY avaliacao desc;
+
+-- Filmes lançados antes dos anos 2000
+SELECT * FROM filmes WHERE ano < 2000;
+
+-- títulos, anos de lançamento, gênero e avaliação dos filmes ordenados por sua avaliação pela crítica
+SELECT (titulo, ano, genero, avaliacao) FROM filmes ORDER BY avaliacao asc;
+
+-- A média de avaliação entre os filmes de até 2 horas e a média de avaliação dos filmes de mais de 2 horas
+SELECT AVG(avaliacao) AS media_avaliacao_filmes_abaixo_de_duas_horas FROM filmes WHERE duracao <= 120;
+SELECT AVG(avaliacao) AS media_avaliacao_filmes_acima_de_duas_horas FROM filmes WHERE duracao > 120;
+
+-- Os nomes, anos de lançamento e avaliações dos filmes ordenados pelo lucro obtido, além do próprio lucro obtido.
+-- SELECT (titulo, ano, avaliacao) FROM filmes ORDER BY (bilheteria - custo);
+SELECT titulo, ano, avaliacao, (bilheteria - custo) AS lucro FROM filmes ORDER BY lucro;  
