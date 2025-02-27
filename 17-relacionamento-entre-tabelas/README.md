@@ -5,7 +5,7 @@ Também chamados de associações, são formas de **vincularmos** os dados de um
 
 **Exemplo:**
 Temos duas tabelas: **clientes** e **endereços**.
-Um relacionamento entre essas tabelas permite que associemos uma linha da tabela de usuários a um endereço específico.
+Um relacionamento entre essas tabelas permite que associemos uma **linha da tabela de usuários** a um **endereço específico**.
 
 ```
 Usuário
@@ -49,17 +49,17 @@ Além das Chaves Primárias, os relacionamentos utilizam o conceito de Chave Est
 
 ## Por que os relacionamentos são importantes?
 1. **Garantir integridade**
-- Relacionamentos ajudam a manter a consistência dos dados que as associações entre tabelas sejam válidas
+- Relacionamentos ajudam a **manter a consistência** dos dados que as associações entre tabelas sejam válidas
   - **Exemplo**: se uma tabela Pedidos tem uma chave estrangeira que referencia a tabela Clientes, cada pedido deve estar associado a um cliente existente 
 
-- As chaves estrangeiras impôem restições que evitam a inserção de dados orfãos ou inconsistentes
+- As chaves estrangeiras impôem restrições que evitam a **inserção de dados orfãos** ou **inconsistentes**
   - **Exemplo**: você não pode inserir um pedido para um cliente que não existe na tabela de Clientes
 
 2. **Evitar redundância**
-- Relacionamentos permitem a normalização do banco de dados, onde os dados são divididos em tabelas relacionadas de forma que cada peça de informação seja armazenada uma única vez
-  - ***Normalização*** é um conjunto de regras que visa a organização de um projeto de banco de dados para reduzir a redundancia de dados, aumentar a integridade de dados e o desempenho
+- Relacionamentos permitem a **normalização do banco de dados**, onde os dados são divididos em tabelas relacionadas de forma que cada peça de informação seja armazenada uma única vez
+  - ***Normalização*** é um conjunto de regras que visa a **organização** de um projeto de banco de dados para **reduzir a redundancia** de dados, **aumentar a integridade** de dados e o **desempenho**
 
-- Com a redução da redundância, a manutenção dos dados se torna mais simples e menos propensa a erros
+- Com a redução da redundância, a manutenção dos dados se torna **mais simples** e **menos propensa a erros**
 
 - Atualizações feitas em uma tabela relacionada automaticamente se refletem nas associações, eliminando a necessiade de múltiplas atualizações em várias tabelas
 
